@@ -1,3 +1,32 @@
 <script type="text/javascript">
 alert("Hello, world!");
+//한줄 주석
+/*두줄이상
+주석*/
+
+let hello = 100; //변수_자료형X
+hello = "hello";
+hello = [1, 2, 3];
+/*
+동적 타입언어이기 때문에 중간에 자료형이 바뀔 수 있음
+-> 자료형 관계X
+*/
+const WORLD = 200; //상수
+
+let str = "hello";
+str = 'world';
+//"" '' 둘중 아무거나 써도 상관없음
+
+str = `mirim ${hello}`;
+//`` 안에는 변수 사용할 수 있음
+
+
+let a = null;
+
+let age = prompt("나이를 입려해주세요,", 100);
+console.log(age);
+
+let isBoss = confirm("당신은 주인인가요?");
+console.log(isBoss);
+
 </script>
