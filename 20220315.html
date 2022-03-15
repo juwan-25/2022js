@@ -50,8 +50,21 @@ function showMwssage2() {
     alert(message);
     userName = 'Bob';
 }
-
 showMwssage2();
 alert(userName);
+
+function showMwssage3(from, text) {
+    alert(from + ' : ' + text);
+}
+//showMwssage3('Ann', 'Hello');
+//showMwssage3('Ann'); text자리에 undefined 
+//showMwssage3(); 둘 다 undefined
+showMwssage3('Ann', 'Hello', 'World'); 
+//앞에 2개 들어감, 에러 발생X
+
+function showMwssage4(from, text = "no text given") {
+    alert(from + ' : ' + text);
+}
+//매개변수 기본값
 
 </script>
