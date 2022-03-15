@@ -67,4 +67,28 @@ function showMwssage4(from, text = "no text given") {
 }
 //매개변수 기본값
 
+function sum(a, b){
+    return a+b;
+}
+let r = sum(4, 5);
+
+function doNothing() {
+    //return;
+}
+let r2 = doNothing(); //undefined return
+
+let r3 = alert("Hello");
+//undefined return > alert 함수는 return값이 없음
+
+let sayHi = function() {
+    alert("Hello");
+};
+sayHi();
+
+let sum1 = function(a, b) {
+    return a+b;
+};
+let sumResult = sum1(3, 6);
+alert(sumResult);
+
 </script>
