@@ -1,0 +1,30 @@
+<script>
+if(0) alert("Hello");
+if("") alert("Hello");
+if(null) alert("Hello");
+if(undefined) alert("Hello");
+if(NaN) alert("Hello");
+//전부 false
+
+//let user = {name : "John"};
+let user;
+
+if(user) {
+    alert(`Hello ${user.name}`);
+} else {
+    alert("사용자 없음");
+}
+
+let result = 10 > 5 ? "Hello" : "World" ; //삼항연산자
+
+let a1 = !! "non-empty string"; //true
+let a2 = !!null; //false
+
+
+let i;
+for(i = 0; i<3; i++){
+    alert(i);
+}
+alert(i);
+
+</script>
