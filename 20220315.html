@@ -85,10 +85,28 @@ let sayHi = function() {
 };
 sayHi();
 
+let func = sayHi; //함수 자체를 대입
+let func1 = sayHi(); // sayHi를 호출해서 대임 > undefined 오류
+func();
+
+
 let sum1 = function(a, b) {
     return a+b;
 };
 let sumResult = sum1(3, 6);
 alert(sumResult);
+
+function ask(question, yes, no) {
+    if (confirm(question)) yes();
+    else no();
+}
+function showOk() {
+    alert( "동의하셨습니다." );
+}
+function showCancel() {
+    alert( "취소 버튼을 누르셨습니다." );
+}
+ask("동의하십니까?", showOk, showCancel); //showOk()하면 return값이 없기 때문에 undefined
+//함수를 값으로 넘길 수 있음 : 일급 객체
 
 </script>
