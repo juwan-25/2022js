@@ -1,4 +1,5 @@
 <script>
+//논리
 if(0) alert("Hello");
 if("") alert("Hello");
 if(null) alert("Hello");
@@ -15,16 +16,42 @@ if(user) {
     alert("사용자 없음");
 }
 
+//논리연산자
 let result = 10 > 5 ? "Hello" : "World" ; //삼항연산자
 
 let a1 = !! "non-empty string"; //true
 let a2 = !!null; //false
 
 
+//반복문
 let i;
 for(i = 0; i<3; i++){
     alert(i);
 }
 alert(i);
+
+//함수
+function showMwssage() {
+    alert("Hello");
+}
+showMwssage();
+
+function showMwssage1() {
+    //함수 내부에서 사용할 지역변수 선언
+    let message = "Hello";
+    //함수 내부에서만 message 접근 가능
+    alert(message);
+}
+showMwssage1();
+
+let userName = 'John';
+function showMwssage2() {
+    let message = 'Hello, ' + userName;
+    alert(message);
+    userName = 'Bob';
+}
+
+showMwssage2();
+alert(userName);
 
 </script>
