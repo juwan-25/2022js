@@ -1,0 +1,81 @@
+<script>
+    let sum = (a,b) => a+b;
+    let r = sum(a,b);
+
+    let age = prompt("나이를 알려주세요.",18);
+    let welcome = (age < 18) ?
+        () => alert("안녕") :
+        () => alert("안녕하세요!");
+        
+    let welcome_1 = (age < 18) ?
+        function() { alert("안녕") }:
+        function() { alert("안녕하세요!") };
+        
+    let sum_1 = (a,b) => a+b;  
+    let sum_2 = (a,b) => {
+        let result = a+b;
+        return result;
+        //중괄호 사용시 두줄이상 쓸 수 있음, 중괄호 사용시 return문 사용해야 함
+    }
+
+    function gugudan1(a,b){
+        if(a===undefined||b===undefined){
+            for(let i=2; i<=9; i++)
+            for(let j=1; j<=9; j++)
+                console.log(`${i} X ${j} = ${i*j}`)
+        }
+        else {
+            for(let i=a; i<=b; i++)
+                for(let j=1; j<=9; j++)
+                    console.log(`${i} X ${j} = ${i*j}`)
+        }
+    } 
+    gugudan1(3,5);
+    gugudan1();
+
+    const gugudan2 = function(a=2, b=9){
+        for(let i=a; i<=b; i++)
+                for(let j=1; j<=9; j++)
+                    console.log(`${i} X ${j} = ${i*j}`)
+    }
+    gugudan2();
+
+    const gugudan3 = (a=2, b=0) => {
+        for(let i=a; i<=b; i++)
+                for(let j=1; j<=9; j++)
+                    console.log(`${i} X ${j} = ${i*j}`)
+    }
+    gugudan3();
+
+    let user1 = new Object();
+    let user2 = {};
+    let user3 = {
+        name : "John",
+        age : 28,
+        gender : "Male",
+        salary : 3000
+    };
+
+    console.log(user.name);
+    console.log(user["name"]);
+    console.log(user.age);
+    console.log(user["age"]);
+
+    console.log(user3.name);
+    console.log(user3.age)
+
+    user3.isAdmin = true;
+
+    delete user3.age;
+
+    console.log(user);
+
+    let keyname = "name";
+    console.log(user.keyname);
+    //undefined -> user의 keyname에 접근
+    console.log(user["keyname"]);
+    //undefined -> user의 keyname에 접근
+    console.log(user[keyname]);
+    //John -> 변수 keyname 참조, user의 name에 접근
+
+</script>
