@@ -1,0 +1,52 @@
+<script>
+    let user = {};
+
+    console.log(user.noSuchProp);
+
+
+    let user1 = {
+        name : "John",
+        age : 30,
+        isAdmin : true
+    };
+   
+    //for in 반복문
+    for(let key in user1) {
+        console.log(key);
+        console.log(user1[key]);
+    }
+
+    let message = "Hello";
+    //원시값 대입으로 인해 값의 복사 발생
+    let phrase = message;
+    phrase = "Bye!";
+
+    let user2 = {
+        name : "John"
+    };
+    let admin = user2;
+
+    let user3 = {
+        name : "Ken"
+    }
+    console.log(user3.name);
+    function changeName(user3) {
+        user3.name = "Pete";
+    }
+
+    console.log(user3.name);
+
+    let a = {};
+    let b = a;
+    //같은 객체를 가지고 있음
+    console.log(a==b); //true
+    console.log(a===b); //true
+    
+    let c = {};
+    let d = {};
+    //각각 독립된 객체를 만들기 때문에 서로 다름
+    console.log(c===d); //false
+    console.log({}==={}); //false
+    console.log(c==d); //true
+    //내용은 동일
+</script>
