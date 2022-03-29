@@ -123,4 +123,32 @@
     }
     sayHi();
     //엄격모드이면 undefined
+    //엄격모드가 아니면 window 객체
+
+    function User(name) {
+        //this = {};
+        //new를 하면 비어있는 객체가 생성
+        this.name = name;
+        this.isAdmin = flase;
+        //return this
+    }
+
+    let u = new User("John");
+    //new를 안하면 window 혹은 undefined 가 생겨 원하는 결과X
+
+    //문제풀이
+    //학생 생성 생성자 함수, 이름나이성별학번 전달받아 객체 생성 역할, new 연산자 활용 객체 생성
+
+    function Student(name, age, gender, grade) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.grade;
+        this.intro = function() {
+            alert("I`m jeno");
+        }
+    }
+    let student = new Student("나재민", 23, "남", "1308");
+    console.log(student);
+    student.intro();
 </script>
