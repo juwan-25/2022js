@@ -49,4 +49,30 @@
     console.log({}==={}); //false
     console.log(c==d); //true
     //내용은 동일
+
+
+    //문제풀이 - copy함수 만들기
+    //copy함수 내 빈 객체를 생성, for in 반복문으로 접근해 빈 객체에 내용 복사, 개체 반환
+
+    
+    function copy(target) {
+        let change = {};
+        for(let key in target){
+            change[key] = target[key];
+        }
+        return change;
+    }
+    let user4 = {
+        name : "John",
+        age : 18
+    }
+    let copied = copy(user4);
+
+    console.log(user4 === copied); //false
+    // 서로 독립된 객체에 저장되어 있어 동일하지 않음
+    copied.name = "Ken";
+    console.log(user4.name); //John 
+    // 독립되어 복사된 값을 바꾸더라도 영향이 없음
+
+
 </script>
