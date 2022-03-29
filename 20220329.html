@@ -66,6 +66,9 @@
         name : "John",
         age : 18
     }
+    //shallow copy - 참조, 영향O
+    let co = user4;
+    //deep copy - 값 하나하나를 따로 복사, 독립된 객체 - 서로 영향X
     let copied = copy(user4);
 
     console.log(user4 === copied); //false
@@ -74,5 +77,50 @@
     console.log(user4.name); //John 
     // 독립되어 복사된 값을 바꾸더라도 영향이 없음
 
+    user5 = {
+        name : "John",
+        age : 30
+    };
+    user5.sayHi = function() {
+        alert("안녕하세요!");
+    };
 
+    user6 = {
+        name : "John",
+        age : 30,
+        // sayHi : function() {
+        //     alert("안녕하세요!");
+        //축약
+        sayHi() {
+            alert("안녕하세요!");
+        }
+    };
+    console.log(user5.sayHi());
+
+    user7 = {
+        name : "John",
+        age : 30,
+        sayName() {
+            alert(this.name);
+        }
+    };
+    user7.sayName();
+    //this는 .바로 앞에 있는 것을 의미
+
+    let user8 = {name : "RENJUN"};
+    let admin1 = {name : "HAECHAN"};
+
+    function f() {
+        alert(this.name);
+    }
+    user8.f();
+    admin1.f();
+
+    "use strict" //엄격모드
+
+    function sayHi() {
+        alert(this);
+    }
+    sayHi();
+    //엄격모드이면 undefined
 </script>
