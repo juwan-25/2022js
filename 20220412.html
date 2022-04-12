@@ -1,0 +1,13 @@
+<script>
+    let users = [
+        {id : 1, name : "renjun", age : 23},
+        {id : 2, name : "taeyong", age : 28},
+        {id : 3, name : "jisung", age : 21}
+    ];
+    //조건에 true가 되면 true가 반환되는 것이 아니라 그 값이 반환됨
+    let someUsers = users.filter(function(users) {
+        return users.age < 24;
+    });
+    console.log(someUsers);
+    
+</script>
