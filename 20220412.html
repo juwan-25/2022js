@@ -4,12 +4,21 @@
         {id : 2, name : "taeyong", age : 28},
         {id : 3, name : "jisung", age : 21}
     ];
+
     //조건에 true가 되면 true가 반환되는 것이 아니라 그 값이 반환됨
     let someUsers = users.filter(function(users) {
         return users.age < 24;
     });
     console.log(someUsers);
+
+    //for each
     someUsers.forEach(function(users){
         console.log(users.name);
     });
+
+    //map : 원하는 것을 return해서 그것만 들어있는 배열을 만들 수 있음
+    let names = users.map(function(item){
+        return item.name;
+    });
+    console.log(names);
 </script>
