@@ -20,7 +20,7 @@
     // Q1) 영화 제목 길이 오름차순으로 정렬 
     let movies = ["누구를 위하여 종은 울리나", "기생충", "패왕별희", "북북서로 진로를 돌려라", "시"];
     // Q2) 학생 점수 내림차순으로 정렬
-    let students = [{ name: "김철수", score: 100 }, { name: "박미림", score: 80 }, { name: "유영희", score: 90 }];
+    let students = [{ name: "김철수", score: 100 }, { name: "박미림", score: 80 }, { name: "유영희", score: 90 }, {name : "가가가", score:0}];
 
     //오름차순
     movies.sort( (m1,m2) => m1.length - m2.length);
@@ -30,6 +30,13 @@
     console.log(movies);
     console.log(students);
 
+    movies.score( (m1,m2) => m1.name.codePointA(0) - m2.name.codePointA(0));
 
+    console.log(mpvies);
     
+
+    //reverse 뒤집는 함수
+    //isArray 배열인지 확인
+    //instanceof 어떤 타입인지 확인(자바와 동일)
+
 </script>
