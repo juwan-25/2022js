@@ -1,0 +1,50 @@
+<script>
+    //함수 문제풀이 1
+    function sumAll(arr){
+        let sum=0;
+        for(let i=0; i<arr.length; i++)
+            sum+=arr[i];
+        return sum;
+    }
+
+    const r1 = sumAll([1,2,3]);
+    const r2 = sumAll([1,2,3,4,5]);
+
+    console.log(r1);
+    console.log(r2);
+
+    //함수 문제풀이 2
+    function filter(arr, num){
+        let arr1 = [];
+        for(let i=0; i<arr.length; i++)
+            if(arr[i]!== num) arr1.push(arr[i]); //배열 값 추가
+        return arr1;
+    }
+
+    const result1 = filter([1,2,3], 2);
+    const result2 = filter([1,2,3,3,5,2], 3);
+
+    console.log(result1);
+    console.log(result2);
+
+    //함수 문제풀이 2 - 변형
+
+    function filter2(arr, f_arr){
+        let r_arr = [];
+        for(let i=0; i<arr.length; i++){
+            let found = false;
+            for(let j=0; j<f_arr.length; j++){
+                if(f_arr[j]===arr[i]){
+                    found = true;
+                    break;
+                }
+            }
+            if(!found) r_arr.push(arr[i]);
+        }
+        return r_arr;
+    }
+
+    const result3 = filter2([1, 2, 3, 3, 5, 2], [3, 2]);
+
+    console.log(result3);
+</script>
