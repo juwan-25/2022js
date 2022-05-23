@@ -47,4 +47,49 @@
     const result3 = filter2([1, 2, 3, 3, 5, 2], [3, 2]);
 
     console.log(result3);
+
+    // 함수 문제풀이 3
+    function move(p, m_x, m_y){
+        return {
+            x : p.x + m_x,
+            y : p.y + m_y
+        }
+    }
+
+    let p1 = {x:0, y:2};
+    let p2 = move(p1, 3, 4);
+
+    console.log(p2);
+
+    //함수 문제풀이 4
+    function swap(o){
+        let o3 = {};
+        for(key in o3){
+            value = o3[key];
+            o[value] =  key;
+        }
+        return o3;
+    }
+
+
+    const o1 = {"a":"B", "c":"D"}
+    const o2 = swap(o1);
+
+    console.log(o2);
+
+    //함수 문제풀이 5
+    function chunck(arr, num){
+        let arr1=[];
+        for(let i=0; i<arr.length; i+=num)
+            arr1.push(arr.slice(i,i+num));
+        return arr1;
+    }
+
+    let r = chunck([1,2,3,4,5],2);
+    let rr = chunck([1,2,3,4,5],3);
+
+    console.log(r);
+    console.log(rr);
+
+
 </script>
