@@ -1,0 +1,58 @@
+<script>
+    //2211 이주완
+    function short(str){
+        if(str.length>=10){
+            return str[0]+(str.length-2)+str[str.length-1];
+        } else {
+            return str;
+        }
+    }
+
+    console.log(short("word"));
+    console.log(short("localization"));
+    console.log(short("internationalization")); 
+    console.log(short("o23456789p")); 
+
+</script>
+
+<script>
+    function middle(arr) {
+        let mid = Math.floor(arr.length/2);
+        if(arr.length%2==1){
+            return arr[mid];
+        } else {
+            let to_mid = (arr[mid]+arr[mid-1])/2;
+            return to_mid;
+        }
+    }
+
+    const value1 = middle( [1, 2, 3, 4, 5] );
+    console.log( value1 );
+    const value2 = middle( [1, 3, 5, 7, 9, 11] )
+    console.log( value2 ); 
+    const value3 = middle( [10,20,30] )
+    console.log( value3 ); 
+    const value4 = middle( [0,1] )
+    console.log( value4 ); 
+</script>
+
+<script>
+    function calculateAverage(arr, avg){
+        let sum=0;
+        for(let i=0; i<arr.length; i++){
+            sum+=arr[i];
+        }
+        let result = (avg*(arr.length+1))-sum;
+        if(result>100) result=null;
+        return result;
+    }
+
+    const result1 = calculateAverage( [70, 60], 70 );
+    console.log( result1 );
+    const result2 = calculateAverage( [80, 80, 80], 80 );
+    console.log( result2 ); 
+    const result3 = calculateAverage( [80, 80, 80], 100 );
+    console.log( result3 );
+    const result4 = calculateAverage( [100, 100], 100 );
+    console.log( result4 );
+</script>
