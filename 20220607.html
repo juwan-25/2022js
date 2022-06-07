@@ -1,0 +1,102 @@
+<script>
+    let animal = new Object();
+    animal.name = "puppy";
+    animal.age = 5;
+    animal.gander = "female";
+
+    console.log(animal);
+
+    const sale = {
+        price : 10000,
+        disountRate : 0.2
+    };
+
+    console.log(sale);
+
+</script>
+
+<script>
+    let pen = {
+        color : "black",
+        length : 10
+    };
+
+    pen.thick = 0.38;
+
+    console.log(pen);
+
+    pen["use"] = "soft";
+
+    console.log(pen);
+
+    delete pen.use;
+    
+    console.log(pen.use);
+
+</script>
+
+<script>
+    const test = {
+        name : "test"
+    };
+
+    test["with-hyphen"] = "-";
+    test["woth space"] = "with space";
+
+    console.log(test);
+</script>
+
+<script>
+    let color = "black";
+    let length = 10;
+    let thick = 0.38;
+
+    let pen2 = {
+        color,
+        length,
+        thick
+    };
+
+    console.log(pen2);
+</script>
+
+<script>
+    const user3 = {
+        name : "Renjun",
+        age : 23
+    };
+    query(user3);
+
+    function query(obj){
+        let array = [];
+        for (const key in obj) {
+            array.push(key);
+        }
+        const str = array.join(",");
+
+        while(true) {
+            const propname = prompt(`${str} 중 하나를 입력`);
+            if(array.includes(propname)){
+                alert(obj[propname]);
+                break;
+            }
+        }
+    }
+</script>
+
+<script>
+    const user4 = {id:1, name:"Taeyong", age:20};
+    user4.isMinor = function() {
+        if(this.age<20) return true;
+        else return false;
+    }
+
+    user4.speckName = function(num=1) {
+        for(let i=0; i<num; i++){
+            console.log(this.name);
+        }
+    }
+
+    console.log(user4.isMinor());
+    user4.speckName();
+</script>
