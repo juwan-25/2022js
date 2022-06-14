@@ -1,0 +1,128 @@
+<script>
+    const user = {
+        id:1, 
+        name:"Taeyong", 
+        age:20,
+
+        //리터럴
+        isMinor : function() {
+            if(this.age<20) return true;
+            else return false;
+        },
+
+        //단축구문
+        speckName(num=1) {
+            for(let i=0; i<num; i++){
+                console.log(this.name);
+            }
+        }
+    };
+   
+
+    console.log(user.isMinor());
+    user.speckName();
+</script>
+
+<script>
+    //생성자 함수
+    function Point(x,y) {
+        this.x = x;
+        this.y = y;
+    }
+    let p = new Point(2,3);
+    console.log(p);
+
+    function User(id,name,age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        //메서드 정의
+        this.isMinor = function() {
+            if(this.age<20) return true;
+            else return false;
+        }
+    }
+    let u = new User(1, "John", 20);
+
+    console.log(u);
+    
+</script>
+
+<script>
+    function Bank(balance=0){
+        this.balance = balance;
+        this.deposite = function(input){
+            this.balance+=input;
+        }
+        this.getBalance = function() {
+            return this.alance;
+        }
+        this.withdraw = function(output){
+            if(this.balance<output) {
+                output = this.balance;
+                this.balance = 0;
+                return output;
+            }
+            else {
+                this.balance -= output;
+                return output;
+            }
+        }
+
+    }
+    let bank = new Bank();
+    bank.deposite(1000);
+    bank.deposite(2000);
+    let b1 = bank.getBalance();
+    console.log(b1);
+    let r1 = bank.withdraw(1000);
+    console.log(r1);
+    let b2 = bank.getBalance();
+    console.log(b2);
+    let r2 = bank.withdraw(5000);
+    console.log(r2);
+    console.log(bank.getBalance());
+    
+    
+</script>
+
+<script>
+    function getSummary(arr){
+        let max = arr[0];
+        let min = arr[0];
+        let sum = arr[0];
+        for(let i=1; i<arr.length; i++){
+            sum += arr[i];
+            if(arr[i]>max) max = arr[i];
+            else if(arr[i]<min) min = arr[i];
+        }
+        let avg = sum/arr.length;
+
+        return {max,min,avg};
+    }
+
+    let summary = getSummary([100, 50, 25]);
+    console.log(summary);
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
