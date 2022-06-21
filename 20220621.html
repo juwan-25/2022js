@@ -1,0 +1,23 @@
+<script>
+    //구조 분해 할당 - 매개변수로 전달
+    function showPerson({name="Anomymous",age}){
+        console.log(name, age);
+    }
+    const person = {name:"John",age:20};
+    showPerson(person);
+</script>
+
+<script>
+    let now = new Date();
+    // 현재 날짜 및 시간이 출력됨
+    console.log( now ); 
+
+    // 1970년 1월 1일 0시 0분 0초(UTC+0)를 나타내는 객체
+    let Jan01_1970 = new Date(0);
+    console.log( Jan01_1970 );
+
+    // 1970년 1월 1일의 24시간 후는 1970년 1월 2일(UTC+0)임
+    let Jan02_1970 = new Date(1000 * 60 * 60 * 24);
+    console.log( Jan02_1970 );
+
+</script>
