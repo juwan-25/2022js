@@ -18,4 +18,31 @@
     //단위는 분 이고 해당 offset만큼 더하면 utc 시간이 됨
     alert( new Date().getTimezoneOffset());
 
+
+    let student = {
+        name: 'John',
+        age: 30,
+        isAdmin: false,
+        courses: ['html', 'css', 'js'],
+        wife: null
+    };
+
+    let json = JSON.stringify(student);
+    console.log(json);
+    
+    //json 객체에서 문자열, 프로퍼티를 ""로 감싸야 함, new 사용 불가   
+    let user = {
+        sayHi() { // 무시
+            alert("Hello");
+        },
+        [Symbol("id")]: 123, // 무시
+        something: undefined // 무시
+    }
+    console.log( JSON.stringify(user) );
+
+    let userData = '{ "name": "John", "age": 35, "isAdmin": false, "friends":[0,1,2,3]}';
+    let User = JSON.parse(userData);
+    console.log(User.friends ); // "0,1,2,3"
+
+    
 </script>
